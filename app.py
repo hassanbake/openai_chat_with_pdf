@@ -16,6 +16,11 @@ def main():
     # extract the text
     if pdf is not None:
         pdf_reader = PdfReader(pdf)
+        text = ""
+        for page in pdf_reader.pages:
+            text += page.extract_text()
+
+        st.write(text)
 
 if __name__=='__main__':
     main()
