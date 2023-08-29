@@ -32,8 +32,6 @@ def main():
         length_function=len
       )
       chunks = text_splitter.split_text(text)
-
-      st.write(chunks)
       
       # create embeddings
       embeddings = OpenAIEmbeddings()
